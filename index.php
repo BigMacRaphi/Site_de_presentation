@@ -20,10 +20,13 @@
 		include 'database.php';
 		global $db;
 
-		$q = $db->query("SELECT * FROM users"); 
-		while ($user =$q->fetch()) {
-			echo "id " . $user['id'] . " pseudo : " . $user['Pseudo']. "<br/>";
-		}
+		$q = $db->prepare("INSERT INTO users(pseudo,email,password) VALUES(:pseudo,:email,:password)");
+		$q->execute([
+			'pseudo' => 'BigMacRaphi',
+			'email' => 'rapha.denjean@outlook.com',
+			'password' => 'amsdknfmlkjqsdfl'
+		]);
+
 		if(isset($_POST['formsend'])){
 			$pseudo =$_POST['pseudo'];
 			$age =$_POST['age'];
