@@ -1,0 +1,21 @@
+p.first{
+	color: red
+}
+nav.menu-nav ul li.btn {
+	list-style-type: none;
+	display: inline-block;
+}
+nav.menu-nav ul li.btn a{
+	color: white;
+	background-color: #0473E2;
+	text-decoration: none;
+	padding: 25px;
+}
+nav.menu-nav ul li.btn:hover a{
+	color: white;
+	background-color: #01A1FE;
+	transition: 0,3s;
+}
+div#content div.top{
+	background-color: blue;
+}
